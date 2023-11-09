@@ -1,0 +1,14 @@
+Le funzioni wait(), notify(), e notifyAll() sono metodi che possono essere chiamati su oggetti 
+Java per la sincronizzazione tra thread attraverso il meccanismo di lock e condition. 
+Questi metodi possono essere utilizzati solo all'interno di blocchi synchronized o con l'uso esplicito 
+di un oggetto Lock e le relative Condition.
+
+- wait(): È chiamato su un oggetto in un blocco sincronizzato per rilasciare il lock 
+e mettere il thread in attesa finché un altro thread non invia una notifica o una interruzione.
+
+- notify(): Notifica a un singolo thread in attesa su quell'oggetto che potrebbe essere stato precedentemente
+messo in attesa tramite wait(). Questo thread verrà "svegliato" e proverà a ottenere il lock per continuare l'esecuzione.
+
+- notifyAll(): Notifica tutti i thread in attesa su quell'oggetto che potrebbero essere stati precedentemente 
+messi in attesa tramite wait(). Tutti i thread verranno "svegliati" e proveranno ad ottenere il lock per
+continuare l'esecuzione.
