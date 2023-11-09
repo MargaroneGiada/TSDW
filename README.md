@@ -1,1 +1,1 @@
-# Tecnologie-per-i-sistemi-distribuiti-e-il-web
+# Tecnologie per i sistemi distribuiti e il web
