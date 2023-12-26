@@ -97,23 +97,23 @@ int main(int argc, char** argv){
             // PUNTO C: ritornare al client una stringa del tipo n, x. n è un id progressivo che parte da 0 e x è il risultato della funzione
             // sommacifre(s), che calcola la somma delle cifre
 
-        int sommacifre(char* s){
-            int len = strlen(s);
-            int x = 0;
-            for(int i = 0; i<len; i++){
-                if(isdigit(s[i])){
-                    x += s[i] - '0';
-                }
-            }
-            return x;
-        };
-
         id++;
-        snprintf(buffer, sizeof(buffer), "%d, %d\n\0", id, sommacifre(buffer));
+        sprintf(buffer, "%d, %d\n\0", id, sommacifre(buffer));
 
         write(connectionSock, &buffer, strlen(buffer));
 
     }
 
 
+}
+
+int sommacifre(char* s){
+    int len = strlen(s);
+    int x = 0;
+    for(int i = 0; i<len; i++){
+        if(isdigit(s[i])){
+            x += s[i] - '0';
+        }
+    }
+    return x;
 }
